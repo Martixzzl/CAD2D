@@ -1,0 +1,42 @@
+﻿<Window x:Class="Demo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:wf ="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        xmlns:local="clr-namespace:Demo" xmlns:simplecad="clr-namespace:Graphics2D;assembly=Graphics2D"
+        mc:Ignorable="d"
+        Title="Demo" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Grid>
+        <DockPanel>
+            <ToolBar DockPanel.Dock="Top">
+                <Button x:Name="openFile" Click="openFile_Click"  Content="打开文件"></Button>
+                <Separator></Separator>
+                <Button x:Name="SaveFile" Click="SaveFile_Click"  Content="保存文件"></Button>
+                <Separator></Separator>
+                <Button x:Name="drawPoint" Click="drawPoint_Click" Content="画点"></Button>
+                <Separator></Separator>
+                <Button x:Name="drawLine" Click="drawLine_Click" Content="画线"></Button>
+                <Separator></Separator>
+                <Button x:Name="delete" Click="delete_Click" Content="删除"></Button>
+                <Separator></Separator>
+                <Button x:Name="saveDatas" Content="导出点线数据" Click="OuputDatas" />
+            </ToolBar>
+            <Grid>
+                <WindowsFormsHost HorizontalAlignment="Left"  Margin="0,0,0,50" Name="windowsFormsHost" >
+                    <simplecad:MainWindow x:Name="mainWindow" KeyDown="mainWindow_KeyDown"/>
+                </WindowsFormsHost>
+
+                <WindowsFormsHost  Margin="0,0,0,50" Name="host2" HorizontalAlignment="Right"  Width="300">
+                    <wf:PropertyGrid x:Name="propertyGrid1" Width="50" PropertyValueChanged="propertyGrid1_PropertyValueChanged"/>
+                </WindowsFormsHost>
+            </Grid>
+        </DockPanel>
+        <StatusBar Name="status" DockPanel.Dock="Bottom" Height="50" VerticalAlignment="Bottom">
+            <Label x:Name="lblSelection"/>
+            <Separator></Separator>
+            <TextBlock x:Name="statusCoords"/>
+        </StatusBar>
+    </Grid>
+</Window>

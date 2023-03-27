@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{473B4BE8-4019-4A0C-8B73-59A2A07ED028}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Graphics2D</RootNamespace>
+    <AssemblyName>Graphics2D</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\Command_Edit.cs" />
+    <Compile Include="Document\Document.cs" />
+    <Compile Include="Document\DocumentWriter.cs" />
+    <Compile Include="Document\DocumentReader.cs" />
+    <Compile Include="Document\Enums.cs" />
+    <Compile Include="Document\IDict.cs" />
+    <Compile Include="Document\CompositeDictionary.cs" />
+    <Compile Include="Document\Model.cs" />
+    <Compile Include="Document\TextStyleDictionary.cs" />
+    <Compile Include="Document\LayerDictionary.cs" />
+    <Compile Include="Document\PersistableDictionaryWithDefault.cs" />
+    <Compile Include="Document\PersistableDictionary.cs" />
+    <Compile Include="Drawables\CompositeReference.cs" />
+    <Compile Include="Drawables\Curve.cs" />
+    <Compile Include="Drawables\DrawableList.cs" />
+    <Compile Include="Editor\CPSelectionSet.cs" />
+    <Compile Include="Editor\CPSelectionGetter.cs" />
+    <Compile Include="Editor\SnapPoint.cs" />
+    <Compile Include="Drawables\Point.cs" />
+    <Compile Include="Editor\FloatGetter.cs" />
+    <Compile Include="Editor\SelectionGetter.cs" />
+    <Compile Include="Editor\SaveFilenameGetter.cs" />
+    <Compile Include="Editor\InitArgs.cs" />
+    <Compile Include="Editor\IntGetter.cs" />
+    <Compile Include="Editor\OpenFilenameGetter.cs" />
+    <Compile Include="Editor\SnapPointCollection.cs" />
+    <Compile Include="Editor\TextGetter.cs" />
+    <Compile Include="Editor\InputOptions.cs" />
+    <Compile Include="Editor\InputResult.cs" />
+    <Compile Include="Editor\PointGetter.cs" />
+    <Compile Include="Editor\EditorGetter.cs" />
+    <Compile Include="Document\TextStyle.cs" />
+    <Compile Include="Document\Layer.cs" />
+    <Compile Include="Geometry\Segment2DConverter.cs" />
+    <Compile Include="Geometry\Segment2D.cs" />
+    <Compile Include="View\SelectionWindow.cs" />
+    <Compile Include="View\ViewEvents.cs" />
+    <Compile Include="Drawables\DrawableDictionary.cs" />
+    <Compile Include="View\Camera.cs" />
+    <Compile Include="Graphics\ColorConverter.cs" />
+    <Compile Include="Graphics\Color.cs" />
+    <Compile Include="Graphics\Renderer.cs" />
+    <Compile Include="Document\Settings.cs" />
+    <Compile Include="Commands\Command.cs" />
+    <Compile Include="Commands\Command_Selection.cs" />
+    <Compile Include="Commands\Command_Document.cs" />
+    <Compile Include="Commands\Command_Primitives.cs" />
+    <Compile Include="Editor\ControlPoint.cs" />
+    <Compile Include="Editor\InputArgs.cs" />
+    <Compile Include="Document\IPersistable.cs" />
+    <Compile Include="MathF.cs" />
+    <Compile Include="Editor\SelectionSet.cs" />
+    <Compile Include="Editor\Editor.cs" />
+    <Compile Include="Editor\EditorEvents.cs" />
+    <Compile Include="Geometry\Vector2DConverter.cs" />
+    <Compile Include="Geometry\Point2DConverter.cs" />
+    <Compile Include="Geometry\Point2DCollection.cs" />
+    <Compile Include="View\View2D.cs" />
+    <Compile Include="MainWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drawables\Composite.cs" />
+    <Compile Include="Geometry\Point2D.cs" />
+    <Compile Include="Geometry\Vector2D.cs" />
+    <Compile Include="Geometry\Matrix2D.cs" />
+    <Compile Include="Geometry\Extents2D.cs" />
+    <Compile Include="Graphics\Style.cs" />
+    <Compile Include="Drawables\Drawable.cs" />
+    <Compile Include="Drawables\Line.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\XYAxis.cs" />
+    <Compile Include="View\Grid.cs" />
+    <Compile Include="View\Cursor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

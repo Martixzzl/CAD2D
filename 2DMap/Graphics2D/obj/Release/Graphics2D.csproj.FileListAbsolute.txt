@@ -1,0 +1,8 @@
+D:\wpf\2DMap\Graphics2D\bin\Release\Graphics2D.dll
+D:\wpf\2DMap\Graphics2D\bin\Release\Graphics2D.pdb
+D:\wpf\2DMap\Graphics2D\obj\Release\Graphics2D.csproj.AssemblyReference.cache
+D:\wpf\2DMap\Graphics2D\obj\Release\Graphics2D.MainWindow.resources
+D:\wpf\2DMap\Graphics2D\obj\Release\Graphics2D.csproj.GenerateResource.cache
+D:\wpf\2DMap\Graphics2D\obj\Release\Graphics2D.csproj.CoreCompileInputs.cache
+D:\wpf\2DMap\Graphics2D\obj\Release\Graphics2D.dll
+D:\wpf\2DMap\Graphics2D\obj\Release\Graphics2D.pdb
